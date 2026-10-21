@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-idprobe"
+version = "0.1.0"
+description = "Runtime probe for MCP cross-tenant response leaking via JSON-RPC id collision (CVE-2026-111770)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "hao li", email = "haoli5933@gmail.com" }]
+keywords = ["mcp", "model-context-protocol", "security", "cve-2026-111770", "json-rpc", "pentest"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Topic :: Software Development :: Testing",
+]
+
+[project.urls]
+Homepage = "https://github.com/hahahahahahahahah6/mcp-idprobe"
+
+[project.scripts]
+mcp-idprobe = "mcp_idprobe.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
